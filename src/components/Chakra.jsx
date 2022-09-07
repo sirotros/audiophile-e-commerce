@@ -7,11 +7,11 @@ function Chakra() {
   const earphones = data.filter((e) => e.category === "earphones");
   return (
     <div className="w-3/4 mb-10 mx-auto">
-      {speakers[0] && (
+      {speakers[1] && (
         <div className="h-[595px] w-[1110px] relative bg-orange mx-auto rounded-xl overflow-hidden ">
           <img
-            className="w-[400px] h-[500px] absolute bottom-[-10px] ml-44"
-            src={speakers[0].image.desktop}
+            className="w-[600px] h-[700px] absolute bottom-[-230px] ml-18"
+            src={speakers[0].cartImage}
             alt="speaker"
           />
           <div className="absolute right-[-80px] h-full flex flex-col justify-center text-white">
@@ -38,7 +38,7 @@ function Chakra() {
           <img
             className="w-[540] h-80 rounded-lg"
             src={earphones[0].gallery.second.desktop}
-            alt="image"
+            alt={earphones[0].name}
           />
           <div className="w-2/4 bg-[#F1F1F1] rounded-lg flex flex-col justify-center items-center">
             <p className="font-bold text-2xl"> {earphones[0].name} </p>
@@ -46,7 +46,6 @@ function Chakra() {
           </div>
         </div>
       )}
-
     </div>
   );
 }

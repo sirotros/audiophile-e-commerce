@@ -5,12 +5,13 @@
       "slug": "yx1-earphones",
       "name": "YX1 Wireless Earphones",
       "shortName": "YX1",
+      "png": "https://audiophile-ecommerce-mbart13.vercel.app/images/shared/desktop/image-earphones.png",
       "image": {
         "mobile": "/images/product-yx1-earphones/mobile/image-product.jpg",
         "tablet": "/images/product-yx1-earphones/tablet/image-product.jpg",
-        "desktop": "https://audiophile-ecommerce-mbart13.vercel.app/images/shared/desktop/image-earphones.png"
+        "desktop": "https://audiophile-ecommerce-mbart13.vercel.app/images/category-earphones/desktop/image-yx1-earphones.jpg"
       },
-      "cartImage": "/images/cart/image-yx1-earphones.jpg",
+      "cartImage": "https://audiophile-ecommerce-mbart13.vercel.app/images/shared/desktop/image-earphones.png",
       "category": "earphones",
       "categoryImage": {
         "mobile": "/images/category-earphones/mobile/image-yx1-earphones.jpg",
@@ -95,12 +96,13 @@
       "slug": "xx99-mark-one-headphones",
       "name": "XX99 Mark I Headphones",
       "shortName": "XX99 MK I",
+      "png": "https://a331998513.github.io/audiophile-ecommerce-website/static/media/image-headphones.fbd401d9.png",
       "image": {
         "mobile": "/images/product-xx99-mark-one-headphones/mobile/image-product.jpg",
         "tablet": "/images/product-xx99-mark-one-headphones/tablet/image-product.jpg",
         "desktop": "https://audiophile-ecommerce-mbart13.vercel.app/images/category-headphones/desktop/image-xx99-mark-one.jpg"
       },
-      "cartImage": "/images/cart/image-xx99-mark-one-headphones.jpg",
+      "cartImage": "https://a331998513.github.io/audiophile-ecommerce-website/static/media/image-headphones.fbd401d9.png",
       "category": "headphones",
       "categoryImage": {
         "mobile": "/images/category-headphones/mobile/image-xx99-mark-one.jpg",
@@ -355,12 +357,13 @@
     {
       "id": 5,
       "slug": "zx7-speaker",
-      "name" : "ZX7 SPEAKER",
+      "name": "ZX7 SPEAKER",
       "shortName": "ZX7",
+      "png": "https://audiophile-ecommerce-mbart13.vercel.app/images/shared/desktop/image-speakers.png",
       "image": {
         "mobile": "/images/product-zx7-speaker/mobile/image-product.jpg",
         "tablet": "/images/product-zx7-speaker/tablet/image-product.jpg",
-        "desktop": "https://audiophile-ecommerce-mbart13.vercel.app/images/shared/desktop/image-speakers.png"
+        "desktop": "https://audiophile-ecommerce-mbart13.vercel.app/images/category-speakers/desktop/image-zx7.jpg"
       },
       "cartImage": "/images/cart/image-zx7-speaker.jpg",
       "category": "speakers",
@@ -447,10 +450,11 @@
       "slug": "zx9-speaker",
       "name": "ZX9 Speaker",
       "shortName": "ZX9",
+
       "image": {
         "mobile": "https://audiophile-ecommerce-mbart13.vercel.app/images/home/mobile/image-speaker-zx9.png",
         "tablet": "https://audiophile-ecommerce-mbart13.vercel.app/images/home/tablet/image-speaker-zx9.png",
-        "desktop": "https://audiophile-ecommerce-mbart13.vercel.app/images/home/desktop/image-speaker-zx9.png"
+        "desktop": "https://audiophile-ecommerce-mbart13.vercel.app/images/category-speakers/desktop/image-zx9.jpg"
       },
       "cartImage": "https://audiophile-ecommerce-mbart13.vercel.app/images/shared/desktop/image-speakers.png",
       "category": "speakers",

@@ -9,20 +9,20 @@ function Categories() {
   const headphones = data.filter((e) => e.category === "headphones");
   const speakers = data.filter((e) => e.category === "speakers");
   const earphones = data.filter((e) => e.category === "earphones");
-
   const categories = [
     {
-      img: headphones[0].categoryImage.desktop,
+      img: headphones[0].png,
       category: "Headphones",
       link: "/headphones",
     },
     {
-      img: speakers[0].image.desktop,
+      img: speakers[0].png,
+
       category: "Spekaer",
       link: "/speakers",
     },
     {
-      img: earphones[0].image.desktop,
+      img: earphones[0].png,
       category: "Earphones",
       link: "/earphones",
     },
@@ -30,7 +30,7 @@ function Categories() {
 
   return (
     <div
-      className="w-3/4 mx-auto flex mt-24 justify-evenly 
+      className="w-3/4 mx-auto flex mt-40 justify-evenly 
     "
     >
       {categories.map((category) => {
