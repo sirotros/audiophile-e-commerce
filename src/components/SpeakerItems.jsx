@@ -28,7 +28,7 @@ function SpeakerItems() {
                 ) : null}
                 <h1 className="text-4xl font-bold my-5"> {speaker.name} </h1>
                 <p>{speaker.description}</p>
-                <Link to={"/"}>
+                <Link to={speaker.slug}>
                   <Button orange>SEE PRODUCT</Button>
                 </Link>
               </div>

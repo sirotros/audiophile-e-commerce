@@ -2,7 +2,7 @@ import React from "react";
 
 function BestGear() {
   return (
-    <div className="w-3/4 mx-auto">
+    <div className="w-3/4 mx-auto mt-32">
       <div className="w-3/4 mx-auto flex justify-between">
         <div className="my-auto w-[500px]">
           <h1 className="text-4xl font-semibold">

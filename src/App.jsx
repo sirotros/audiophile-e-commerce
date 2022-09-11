@@ -6,6 +6,8 @@ import Earphones from "./pages/Earphones";
 import Headphones from "./pages/Headphones";
 import Home from "./pages/Home";
 import Speakers from "./pages/Speakers";
+import ProductPage from "./pages/ProductPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,10 +16,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/headphones" element={<Headphones />} />
+        <Route path="/headphones/:slug" index element={<ProductPage />} />
         <Route path="/speakers" element={<Speakers />} />
+        <Route path="/speakers/:slug" index element={<ProductPage />} />
         <Route path="/earphones" element={<Earphones />} />
+        <Route path="/earphones/:slug" index element={<ProductPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }

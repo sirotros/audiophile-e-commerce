@@ -30,30 +30,31 @@ function Categories() {
 
   return (
     <div
-      className="w-3/4 mx-auto flex mt-40 justify-evenly 
+      className="w-defaultWidth mx-auto flex mt-40 justify-evenly 
     "
     >
-      {categories.map((category) => {
-        return (
-          <Link
-            to={category.link}
-            className="w-[350px] h-[200px] bg-[#F1F1F1] mb-10 relative"
-            key={nanoid()}
-          >
-            <img
-              src={category.img}
-              className="absolute w-[200px] h-[200px] ml-20 bottom-16 hover:translate-y-[-10px] hover:transition"
-              alt="category"
-            />
-            <p className="flex justify-center mt-28 py-2">
-              {category.category}
-            </p>
-            <div className="flex justify-center items-center">
-              Shop <AiOutlineRight className="ml-2 text-orange" />
-            </div>
-          </Link>
-        );
-      })}
+      {categories &&
+        categories.map((category) => {
+          return (
+            <Link
+              to={category.link}
+              className="w-[350px] h-[200px] bg-[#F1F1F1] mb-10 relative"
+              key={nanoid()}
+            >
+              <img
+                src={category.img}
+                className="absolute w-[200px] h-[200px] ml-20 bottom-16 hover:translate-y-[-10px] hover:transition"
+                alt="category"
+              />
+              <p className="flex justify-center mt-28 py-2">
+                {category.category}
+              </p>
+              <div className="flex justify-center items-center">
+                Shop <AiOutlineRight className="ml-2 text-orange" />
+              </div>
+            </Link>
+          );
+        })}
     </div>
   );
 }

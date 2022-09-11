@@ -3,7 +3,12 @@ import EarphonesItem from "../components/EarphonesItem";
 import Categories from "../components/Categories";
 import BestGear from "../components/BestGear";
 import Footer from "../components/Footer";
+
+import { changeTitle } from "../utils";
+
 function Earphones() {
+  changeTitle("Audiophile Shop - headphones");
+
   return (
     <>
       <div className="h-60 w-full bg-dark text-white flex items-center justify-center text-5xl">
@@ -12,7 +17,6 @@ function Earphones() {
       <EarphonesItem />
       <Categories />
       <BestGear />
-      <Footer />
     </>
   );
 }

@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 function NewProduct() {
   const data = useSelector((state) => state.product.product.products);
-  const newItem = data.filter(e => e.new === true)
-
+  const newItem = data.filter((e) => e.new === true);
 
   return (
     <div className="w-full bg-[#191919] h-[525px] bg-[url(https://a331998513.github.io/audiophile-ecommerce-website/static/media/image-hero.55c18e98.jpg)] bg-auto bg-no-repeat bg-center relative">
@@ -19,7 +18,7 @@ function NewProduct() {
         <p className="w-[500px] text-gray">
           {newItem[1].description.toUpperCase()}
         </p>
-        <Link to={"/"}>
+        <Link to={`/headphones/${newItem[1].slug}`}>
           <Button orange> SEE PRODUCT</Button>
         </Link>
       </div>

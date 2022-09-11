@@ -28,7 +28,7 @@ function EarphonesItem() {
                 ) : null}
                 <h1 className="text-4xl font-bold my-5"> {earphone.name} </h1>
                 <p>{earphone.description}</p>
-                <Link to={"/"}>
+                <Link to={earphone.slug}>
                   <Button orange>SEE PRODUCT</Button>
                 </Link>
               </div>

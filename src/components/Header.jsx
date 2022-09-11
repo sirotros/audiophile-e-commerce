@@ -1,33 +1,76 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { open, close } from "../redux/ModalRedux";
+import { Link, NavLink } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
+import Modal from "./Modal";
+import Basket from "./Basket";
 function Header() {
+  const dispatch = useDispatch();
+  const modalBoolean = useSelector((state) => state.modalOpen.modalOpen);
+  const closeModal = () => dispatch(close());
+  const openModal = () => dispatch(open());
 
   return (
     <header className="w-full h-20 bg-dark">
-      <div className="w-2/4 h-full mx-auto flex items-center justify-between">
+      <div className="w-defaultWidth h-full mx-auto flex items-center justify-between">
         <Link to={"/"} className="text-white text-2xl ">
           audiophile
         </Link>
         <div className="flex items-center h-full">
-          <Link className="text-white mx-3 text-sm h-full flex items-center hover:text-orange" id="home" to={"/"}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "text-orange mx-3 text-sm h-full flex items-center hover:text-orange"
+                : "text-white mx-3 text-sm h-full flex items-center hover:text-orange"
+            }
+            id="home"
+            to={"/"}
+          >
             HOME
-          </Link>
-          <Link className="text-white mx-3 text-sm h-full flex items-center hover:text-orange" id="headphones" to={"/headphones"}>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "text-orange mx-3 text-sm h-full flex items-center hover:text-orange "
+                : "text-white mx-3 text-sm h-full flex items-center hover:text-orange"
+            }
+            id="headphones"
+            to={"/headphones"}
+          >
             HEADPHONES
-          </Link>
-          <Link className="text-white mx-3 text-sm h-full flex items-center hover:text-orange" id="speakers" to={"/speakers"}>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "text-orange mx-3 text-sm h-full flex items-center hover:text-orange "
+                : "text-white mx-3 text-sm h-full flex items-center hover:text-orange"
+            }
+            id="speakers"
+            to={"/speakers"}
+          >
             SPEAKERS
-          </Link>
-          <Link id="earphones" className="text-white mx-3 text-sm h-full flex items-center hover:text-orange" to={"/earphones"}>
+          </NavLink>
+          <NavLink
+            id="earphones"
+            className={({ isActive }) =>
+              isActive
+                ? "text-orange mx-3 text-sm h-full flex items-center hover:text-orange "
+                : "text-white mx-3 text-sm h-full flex items-center hover:text-orange"
+            }
+            to={"/earphones"}
+          >
             EARPHONES
-          </Link>
+          </NavLink>
         </div>
-        <Link to={"/"} className="text-white">
+        <button onClick={openModal} className="text-white">
           <AiOutlineShoppingCart />
-        </Link>
+        </button>
       </div>
+      <Modal isOpen={modalBoolean} onClose={closeModal}>
+        <Basket />
+      </Modal>
     </header>
   );
 }

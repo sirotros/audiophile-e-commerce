@@ -2,8 +2,10 @@ import React from "react";
 import Categories from "../components/Categories";
 import Footer from "../components/Footer";
 import HeadphonesItem from "../components/HeadphonesItem";
+import { changeTitle } from "../utils";
 
 function Headphones() {
+  changeTitle("Audiophile Shop - headphones")
   return (
     <>
       <div className="h-60 w-full bg-dark text-white flex items-center justify-center text-5xl">
@@ -11,7 +13,6 @@ function Headphones() {
       </div>
       <HeadphonesItem />
       <Categories />
-      <Footer />
     </>
   );
 }

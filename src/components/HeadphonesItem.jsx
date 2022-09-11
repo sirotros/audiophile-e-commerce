@@ -27,7 +27,7 @@ function HeadphonesItem() {
               ) : null}
               <h2 className="text-4xl"> {headphone.name} </h2>
               <p className="py-5"> {headphone.description} </p>
-              <Link to={"/"}>
+              <Link to={headphone.slug}>
                 <Button orange> SEE PRODUCT </Button>
               </Link>
             </div>
