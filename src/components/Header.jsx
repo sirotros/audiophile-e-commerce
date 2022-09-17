@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { open, close } from "../redux/ModalRedux";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-
+import { calculatQuantity } from "../redux/basket";
 import Modal from "./Modal";
 import Basket from "./Basket";
 function Header() {
@@ -11,7 +11,11 @@ function Header() {
   const modalBoolean = useSelector((state) => state.modalOpen.modalOpen);
   const closeModal = () => dispatch(close());
   const openModal = () => dispatch(open());
-
+  const basket = useSelector((state) => state.baskets.baskets);
+  const basketTotal = useSelector((state) => state.baskets.quantity);
+  useEffect(() => {
+    dispatch(calculatQuantity());
+  }, [basket]);
   return (
     <header className="w-full h-20 bg-dark">
       <div className="w-defaultWidth h-full mx-auto flex items-center justify-between">
@@ -64,9 +68,19 @@ function Header() {
             EARPHONES
           </NavLink>
         </div>
-        <button onClick={openModal} className="text-white">
-          <AiOutlineShoppingCart />
-        </button>
+
+        {basketTotal > 0 ? (
+          <button onClick={openModal} className="text-white relative">
+            <AiOutlineShoppingCart className="text-2xl" />
+            <span className="absolute bottom-3 left-4 bg-orange rounded-full flex items-start justify-center text-xs w-5 h-5">
+              {basketTotal}
+            </span>
+          </button>
+        ) : (
+          <button onClick={openModal} className="text-white">
+            <AiOutlineShoppingCart className="font-2xl" />
+          </button>
+        )}
       </div>
       <Modal isOpen={modalBoolean} onClose={closeModal}>
         <Basket />

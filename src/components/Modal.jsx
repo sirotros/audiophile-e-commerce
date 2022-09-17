@@ -26,7 +26,7 @@ function Modal({ children, isOpen = false, onClose }) {
   return createPortal(
     <ModalContainer>
       <Overlay onClick={onClose} />
-      <div className="min-w-[300px] absolute right-52 top-28">{children}</div>
+      <div className="min-w-[400px] absolute right-52 top-28">{children}</div>
     </ModalContainer>,
     modalRoot
   );

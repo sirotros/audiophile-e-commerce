@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Speakers from "./pages/Speakers";
 import ProductPage from "./pages/ProductPage";
 import Footer from "./components/Footer";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <Route path="/earphones/:slug" index element={<ProductPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-
+      <Toaster position="top-left" />
       <Footer />
     </>
   );
