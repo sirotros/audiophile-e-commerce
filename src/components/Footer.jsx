@@ -7,7 +7,7 @@ import {
 } from "react-icons/ai";
 function Footer() {
   return (
-    <footer className="w-full h-[350px] mt-10 bg-[#191919] text-white ">
+    <footer className="w-full h-[350px]  bg-[#191919] text-white ">
       <div className="w-2/4 mx-auto flex">
         <div className="flex flex-col justify-evenly mt-12 h-[250px]">
           <h2 className="font-bold text-3xl">audiophile</h2>

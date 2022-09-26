@@ -2,7 +2,6 @@ import React from "react";
 import EarphonesItem from "../components/EarphonesItem";
 import Categories from "../components/Categories";
 import BestGear from "../components/BestGear";
-import Footer from "../components/Footer";
 
 import { changeTitle } from "../utils";
 

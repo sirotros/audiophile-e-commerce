@@ -30,7 +30,7 @@ function Categories() {
 
   return (
     <div
-      className="w-defaultWidth mx-auto flex mt-40 justify-evenly 
+      className="lg:w-defaultWidth sm:w-[350px] sm:mt-50 mx-auto flex sm:flex-col lg:flex-row sm:mt-20 lg:mt-40 lg:justify-evenly 
     "
     >
       {categories &&
@@ -38,7 +38,7 @@ function Categories() {
           return (
             <Link
               to={category.link}
-              className="w-[350px] h-[200px] bg-[#F1F1F1] mb-10 relative"
+              className="w-[350px] h-[200px] bg-[#F1F1F1] mb-10 sm:mt-10 relative"
               key={nanoid()}
             >
               <img

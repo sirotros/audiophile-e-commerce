@@ -2,7 +2,6 @@ import React from "react";
 import BestGear from "../components/BestGear";
 import Categories from "../components/Categories";
 import Chakra from "../components/Chakra";
-import Footer from "../components/Footer";
 import NewProduct from "../components/NewProduct";
 import { changeTitle } from "../utils";
 
@@ -17,6 +16,5 @@ function Home() {
     </>
   );
 }
-
 
 export default Home;

@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { nanoid } from "nanoid";
 
-import { addToCart } from "../redux/basket";
+import { addToBasket } from "../redux/basket";
 import Button from "../components/Button";
-// import toast from "react-hot-toast";
 function ProductDetail() {
   const { slug } = useParams();
   const { pathname } = useLocation();
@@ -16,12 +15,11 @@ function ProductDetail() {
   const includedItems = detailProduct.includedItems;
   const likes = detailProduct.others;
 
-  const baskets = useSelector((state) => state.baskets.baskets);
   const [quantity, setQuantity] = useState(1);
 
   const addBasket = () => {
     const newBasketItem = { id: detailProduct.id, detailProduct, quantity };
-    dispatch(addToCart(newBasketItem));
+    dispatch(addToBasket(newBasketItem));
     setQuantity(1);
   };
 
@@ -55,7 +53,7 @@ function ProductDetail() {
           <p className="my-5">${detailProduct.price}</p>
 
           <div className="flex items-center justify-evenly w-2/4 h-8 -ml-5">
-            <div className="flex items-center bg-grayLight w-24 h-12">
+            <div className="flex items-center bg-grayLight w-24 h-11">
               <button className="w-80 " onClick={decrementQuantitiy}>
                 -
               </button>

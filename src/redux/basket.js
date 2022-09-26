@@ -11,7 +11,7 @@ export const basket = createSlice({
     quantity: 0,
   },
   reducers: {
-    addToCart: (state, action) => {
+    addToBasket: (state, action) => {
       const existingIndex = state.baskets?.findIndex(
         (item) => item.id === action.payload.id
       );
@@ -32,7 +32,7 @@ export const basket = createSlice({
       }
       localStorage.setItem("basket", JSON.stringify(state.baskets));
     },
-    decreaseCart(state, action) {
+    decreaseBasket(state, action) {
       const itemIndex = state.baskets.findIndex(
         (item) => item.id === action.payload.id
       );
@@ -47,24 +47,15 @@ export const basket = createSlice({
         state.baskets = nextbaskets;
       }
 
-      localStorage.setItem("baskets", JSON.stringify(state.baskets));
+      localStorage.setItem("basket", JSON.stringify(state.baskets));
     },
-    increaseCart(state, action) {
+    increaseBasket(state, action) {
       const itemIndex = state.baskets.findIndex(
         (item) => item.id === action.payload.id
       );
+      state.baskets[itemIndex].quantity += 1;
 
-      if (state.baskets[itemIndex].quantity > 1) {
-        state.baskets[itemIndex].quantity += 1;
-      } else if (state.baskets[itemIndex].quantity === 1) {
-        const nextbaskets = state.baskets.filter(
-          (item) => item.id !== action.payload.id
-        );
-
-        state.baskets = nextbaskets;
-      }
-
-      localStorage.setItem("baskets", JSON.stringify(state.baskets));
+      localStorage.setItem("basket", JSON.stringify(state.baskets));
     },
     calculatQuantity(state, action) {
       let quantity = 0;
@@ -76,13 +67,20 @@ export const basket = createSlice({
 
     calculatTotalPrice(state, action) {
       const totals = state.baskets?.map((basket) => {
-        return basket.detailProduct.price * basket.quantity;
+        return basket.detailProduct?.price * basket?.quantity;
       });
-      const totalPrice = totals?.reduce((a, b) => a + b);
+      let totalPrice = 0;
+      totals.map((total) => (totalPrice += total));
       state.totalPrice = totalPrice;
     },
 
-    clearCart(state, action) {
+    clearBasketPayment(state){
+      state.baskets = [];
+      state.quantity = 0;
+      state.totalPrice = 0;
+      localStorage.removeItem("basket");
+    },
+    clearBasket(state) {
       state.baskets = [];
       state.quantity = 0;
       state.totalPrice = 0;
@@ -92,12 +90,13 @@ export const basket = createSlice({
   },
 });
 export const {
-  addToCart,
-  decreaseCart,
-  increaseCart,
+  addToBasket,
+  decreaseBasket,
+  increaseBasket,
   calculatQuantity,
   calculatTotalPrice,
   removeFromCart,
-  clearCart,
+  clearBasketPayment,
+  clearBasket,
 } = basket.actions;
 export default basket.reducer;

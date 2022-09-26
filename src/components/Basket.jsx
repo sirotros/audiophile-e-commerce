@@ -1,35 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { decreaseCart, increaseCart, clearCart } from "../redux/basket";
+import { decreaseBasket, increaseBasket, clearBasket } from "../redux/basket";
 import { nanoid } from "nanoid";
 import { Link } from "react-router-dom";
 import Button from "./Button";
-import { close } from "../redux/ModalRedux";
-
-function Basket() {
+import { calculatTotalPrice } from "../redux/basket";
+function Basket({ toggleModal }) {
   const dispatch = useDispatch();
 
-  const closeModal = () => dispatch(close());
   const basketItem = useSelector((state) => state.baskets.baskets);
   const totalPrice = useSelector((state) => state.baskets.totalPrice);
 
+  useEffect(() => {
+    dispatch(calculatTotalPrice());
+  }, [basketItem]);
   const decrementQuantity = (basket) => {
-    dispatch(decreaseCart(basket));
+    dispatch(decreaseBasket(basket));
   };
 
   const incrementQuantity = (basket) => {
-    dispatch(increaseCart(basket));
+    dispatch(increaseBasket(basket));
   };
   const removeAll = () => {
-    dispatch(clearCart());
+    dispatch(clearBasket());
   };
   return (
     <>
       {basketItem.length > 0 ? (
         <div className="w-full min-h-48 p-4 rounded-lg bg-white">
           <div className="w-full flex justify-between">
-            <h1>Cart ({basketItem.length}) </h1>
+            <h1>Basket ({basketItem.length}) </h1>
             <button className="underline text-gray" onClick={removeAll}>
               Remove All
             </button>
@@ -46,7 +47,7 @@ function Basket() {
                     />
                   )}
 
-                  <div>
+                  <div className="text-left w-full px-7">
                     <p>{basket.detailProduct.name}</p>
                     <p>${basket.detailProduct.price}</p>
                   </div>
@@ -73,7 +74,7 @@ function Basket() {
             <p> Total </p>
             <p className="font-bold text-lg"> ${totalPrice} </p>
           </div>
-          <Link to={"/"} onClick={closeModal}>
+          <Link to={"/checkout"} onClick={toggleModal}>
             <Button orange full className="h-[40px]">
               CHECKOUT
             </Button>
@@ -82,7 +83,7 @@ function Basket() {
       ) : (
         <div className="w-full min-h-48 p-4 rounded-lg bg-white">
           <h1 className="w-full flex justify-center text-lg">
-            Your Cart is empty
+            Your Basket is empty
           </h1>
           <AiOutlineShoppingCart className="w-14 h-14 mx-auto mt-5" />
         </div>

@@ -5,13 +5,10 @@ import Button from "./Button";
 function NewProduct() {
   const data = useSelector((state) => state.product.product.products);
   const newItem = data.filter((e) => e.new === true);
-
   return (
-    <div className="w-full bg-[#191919] h-[525px] bg-[url(https://a331998513.github.io/audiophile-ecommerce-website/static/media/image-hero.55c18e98.jpg)] bg-auto bg-no-repeat bg-center relative">
-      <div className="absolute top-28 left-96">
-        <h4 className="text-gray text-xl  tracking-widest">
-          {newItem[1].new ? "NEW PRODUCT" : ""}
-        </h4>
+    <div className="w-full bg-[#191919] h-[525px] relative">
+      <div className="absolute top-28 left-96 z-[999999]">
+        <h4 className="text-gray text-xl  tracking-widest">NEW PRODUCT</h4>
         <h2 className="text-white text-5xl py-4 w-80">
           {newItem[1].name.toUpperCase()}{" "}
         </h2>
@@ -22,6 +19,11 @@ function NewProduct() {
           <Button orange> SEE PRODUCT</Button>
         </Link>
       </div>
+      <img
+        src={newItem[1].cartImage}
+        alt={newItem[1].name}
+        className="h-[525px] absolute right-72 bottom-2"
+      />
     </div>
   );
 }

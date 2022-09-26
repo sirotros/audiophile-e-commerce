@@ -8,9 +8,10 @@ import Home from "./pages/Home";
 import Speakers from "./pages/Speakers";
 import ProductPage from "./pages/ProductPage";
 import Footer from "./components/Footer";
+import Checkout from "./pages/Checkout";
 import { Toaster } from "react-hot-toast";
-
 function App() {
+
   return (
     <>
       <Header />
@@ -19,9 +20,10 @@ function App() {
         <Route path="/headphones" element={<Headphones />} />
         <Route path="/headphones/:slug" index element={<ProductPage />} />
         <Route path="/speakers" element={<Speakers />} />
-        <Route path="/speakers/:slug" index element={<ProductPage />} />
+        <Route path="/speakers/:slug" element={<ProductPage />} />
         <Route path="/earphones" element={<Earphones />} />
         <Route path="/earphones/:slug" index element={<ProductPage />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Toaster position="top-left" />

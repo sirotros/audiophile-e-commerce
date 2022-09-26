@@ -11,8 +11,19 @@ module.exports = {
       grayLight: "#F1F1F1",
       orange: "#d87d4a",
       orangeLight: "#fbaf85",
+      red: "#CA0000",
     },
+    screens: {
+      sm: "390px",
 
+      md: "768px",
+
+      lg: "1024px",
+
+      xl: "1280px",
+
+      "2xl": "1536px",
+    },
     extend: {
       spacing: {
         defaultWidth: "1158px",

@@ -34,7 +34,6 @@ function Chakra() {
             <Link to={"/speakers/" + speakers[1].slug}>
               <Button outline>SEE PRODUCT</Button>
             </Link>
-            
           </div>
         </div>
       )}

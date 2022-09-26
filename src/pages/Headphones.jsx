@@ -1,6 +1,5 @@
 import React from "react";
 import Categories from "../components/Categories";
-import Footer from "../components/Footer";
 import HeadphonesItem from "../components/HeadphonesItem";
 import { changeTitle } from "../utils";
 
