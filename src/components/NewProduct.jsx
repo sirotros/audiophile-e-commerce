@@ -28,7 +28,7 @@ function NewProduct() {
       <img
         src={newItem[1].cartImage.mobile}
         alt={newItem[1].name}
-        className="lg:h-[500px] sm:h-[500px] sm:w-[350px] absolute sm:left-4 sm:top-2 lg:left-[1100px] lg:top-0 md:left-44 md:w-[500px]"
+        className="lg:h-[450px] lg:w-[400px] sm:h-[450px] sm:w-[350px] absolute sm:left-4 sm:top-2 lg:left-[1100px] lg:top-0 md:left-44 md:w-[500px]"
       />
     </div>
   );

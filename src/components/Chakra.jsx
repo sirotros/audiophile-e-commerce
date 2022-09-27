@@ -11,7 +11,7 @@ function Chakra() {
       {speakers[0] && (
         <div className="lg:h-[595px] lg:w-[1110px] sm:h-[595px] sm:w-11/12 relative bg-orange mx-auto rounded-xl overflow-hidden ">
           <img
-            className="lg:w-[600px] lg:h-[700px]  absolute sm:top-10 lg:bottom-[-230px] ml-18 md:ml-36"
+            className="lg:w-[600px] lg:h-[700px] absolute sm:top-10 lg:top-40 lg:left-[-70px] ml-8 md:ml-36"
             src={speakers[0].cartImage}
             alt="speaker"
           />
@@ -19,7 +19,7 @@ function Chakra() {
             <h1 className="lg:text-8xl lg:w-3/4 sm:text-2xl lg:text-left sm:mt-10">
               {speakers[0].name}
             </h1>
-            <p className="lg:w-80 sm:w-3/4 sm:mx-auto lg:text-left lg:ml-0 lg:mt-8 sm:mt-2 text-[#ffffffbf]">
+            <p className="lg:w-80 sm:w-3/4 sm:mx-auto lg:text-left lg:ml-0 lg:mt-8 sm:mt-2 text-[#ffffffbf] ">
               {speakers[0].description}
             </p>
             <div className="sm:mx-auto lg:ml-0">

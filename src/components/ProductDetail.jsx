@@ -93,12 +93,11 @@ function ProductDetail() {
           <img
             src={detailProduct.gallery?.first?.desktop}
             alt={detailProduct.name}
-            className="md:w-[300px] md:h-[196px]"
           />
           <img
             src={detailProduct.gallery?.second?.desktop}
             alt={detailProduct.name}
-            className="lg:mt-14 sm:mt-10 md:w-[300px] md:h-[196px]"
+            className="lg:mt-14 sm:mt-10"
           />
         </div>
         <img
@@ -113,7 +112,7 @@ function ProductDetail() {
           YOU MAY ALSO LIKE
         </h1>
 
-        <div className="flex lg:flex-row md:flex-row sm:flex-col md:w-3/4">
+        <div className="flex lg:flex-row md:flex-row sm:flex-col md:w-3/4 lg:w-full lg:ml-10">
           {likes
             ? likes.map((like) => {
                 return (
