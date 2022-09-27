@@ -16,11 +16,11 @@ function Checkout() {
   const toggleModal = () => setModalOpen(!modalOpen);
 
   return (
-    <div className="bg-grayLight w-full h-[1400px] ">
-      <button onClick={() => navigate(-1)} className="ml-96 my-10 text-gray">
+    <div className="bg-grayLight w-full lg:h-[1400px] sm:h-[1750px] ">
+      <button onClick={() => navigate(-1)} className="lg:ml-96 my-10 text-gray">
         Go Back
       </button>
-      <div className="w-defaultWidth h-[1400px]  mx-auto flex justify-evenly ">
+      <div className="lg:w-defaultWidth sm:w-full h-[1400px]  mx-auto flex justify-evenly lg:flex-row sm:flex-col ">
         <CheckoutForm
           form={form}
           setForm={setForm}

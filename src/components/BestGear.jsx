@@ -2,14 +2,14 @@ import React from "react";
 
 function BestGear() {
   return (
-    <div className="w-3/4 mx-auto mt-32 mb-20">
-      <div className="w-3/4 mx-auto flex justify-between">
-        <div className="my-auto w-[500px]">
+    <div className="lg:w-3/4 sm:w-10/12 mx-auto mt-32 mb-20">
+      <div className="lg:w-3/4 sm:w-full mx-auto flex justify-between lg:flex-row sm:flex-col">
+        <div className="my-auto lg:w-[500px]">
           <h1 className="text-4xl font-semibold">
             BRINGING YOU THE <span className="text-orange">BEST</span> AUDIO
             GEAR
           </h1>
-          <p className="text-semibold mt-5">
+          <p className="text-semibold sm:my-5 lg:my-5">
             Located at the heart of New York City, Audiophile is the premier
             store for high end headphones, earphones, speakers, and audio
             accessories. We have a large showroom and luxury demonstration rooms

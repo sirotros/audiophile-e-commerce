@@ -18,7 +18,7 @@ function Order() {
   const orderItems = basketItems.slice(0, items);
 
   const displayOrder = () => {
-    if (items == 1) {
+    if (items === 1) {
       setItems(items + basketItems.length);
     } else {
       setItems(1);
@@ -40,8 +40,8 @@ function Order() {
       <p className="text-sm text-gray my-5">
         You will receive an email confirmation shortly.
       </p>
-      <div className="flex h-max">
-        <div className="w-10/12 px-2 bg-grayLight rounded-l-lg">
+      <div className="flex sm:flex-col lg:flex-row h-max">
+        <div className="lg:w-10/12 px-2 bg-grayLight rounded-l-lg">
           {orderItems.map((orderItem) => (
             <div
               key={nanoid()}
@@ -64,13 +64,13 @@ function Order() {
               onClick={(e) => displayOrder()}
               className="w-full text-center text-gray mb-3"
             >
-              {items == 1
+              {items === 1
                 ? `and ${basketItems.length} other item(s)`
                 : "View less"}
             </button>
           ) : null}
         </div>
-        <div className="w-2/4 h-auto bg-dark flex flex-col justify-center  rounded-r-lg">
+        <div className="lg:w-2/4 lg:h-auto sm:h-24 bg-dark flex flex-col justify-center  rounded-r-lg">
           <h1 className="text-gray text-lg ml-10">GRAND TOTAL</h1>
           <p className="text-white ml-10"> $ {grandTotal} </p>
         </div>

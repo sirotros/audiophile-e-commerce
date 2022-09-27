@@ -274,7 +274,10 @@
         "tablet": "/images/product-xx99-mark-two-headphones/tablet/image-product.jpg",
         "desktop": "https://audiophile-ecommerce-mbart13.vercel.app/images/category-headphones/desktop/image-xx99-mark-two.jpg"
       },
-      "cartImage": "https://audiophile-ecommerce-mbart13.vercel.app/images/home/desktop/image-hero.jpg",
+      "cartImage": {
+        "mobile" : "https://audiophile-ecommerce-mbart13.vercel.app/images/home/mobile/image-hero.jpg",
+        "desktop" : "https://audiophile-ecommerce-mbart13.vercel.app/images/home/desktop/image-hero.jpg"
+      },
       "category": "headphones",
       "categoryImage": {
         "mobile": "/images/category-headphones/mobile/image-xx99-mark-two.jpg",

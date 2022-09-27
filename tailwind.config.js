@@ -14,9 +14,9 @@ module.exports = {
       red: "#CA0000",
     },
     screens: {
-      sm: "390px",
+      sm: "360px",
 
-      md: "768px",
+      md: "800px",
 
       lg: "1024px",
 

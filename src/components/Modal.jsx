@@ -23,8 +23,8 @@ function ModalContainer({ children }) {
 function Modal({ children, isOpen = false, basket, middle, onClose }) {
   if (!isOpen) return null;
   const className = `${
-    basket ? "min-w-[400px] absolute right-52 top-28" : ""
-  } ${middle ? "min-w-[500px] absolute" : ""}`;
+    basket ? "lg:w-[400px] sm:w-11/12 absolute lg:right-52 lg:top-28 sm:top-24" : ""
+  } ${middle ? "lg:w-[500px] sm:w-11/12 absolute" : ""}`;
   return createPortal(
     <ModalContainer>
       <Overlay onClick={onClose} />

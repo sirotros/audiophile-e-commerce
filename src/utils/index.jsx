@@ -1,4 +1,3 @@
-import { clearBasket } from "../redux/basket";
 export function changeTitle(title) {
   document.title = title;
 }

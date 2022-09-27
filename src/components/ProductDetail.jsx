@@ -37,23 +37,23 @@ function ProductDetail() {
     setQuantity(increment);
   };
   return (
-    <div className="w-defaultWidth mx-auto">
-      <div className="flex">
+    <div className="lg:w-defaultWidth sm:w-3/4 mx-auto">
+      <div className="flex sm:flex-col md:flex-row">
         <img
           src={detailProduct.image.desktop}
           alt={detailProduct.name}
-          className="w-[493px] h-[511px]"
+          className="lg:w-[493px] lg:h-[511px] md:w-[200px] md:h-[500px] sm:h-[350px]"
         />
-        <div className="ml-16 flex flex-col w-3/4 ">
+        <div className="lg:ml-16 md:ml-14 flex flex-col lg:w-3/4 sm:w-full ">
           {detailProduct.new ? (
             <p className="text-orange mt-10">NEW PRODUCT</p>
           ) : null}
           <h1 className="text-5xl w-80 font-bold my-5">{detailProduct.name}</h1>
-          <p className="w-3/4">{detailProduct.description}</p>
+          <p className="lg:w-3/4">{detailProduct.description}</p>
           <p className="my-5">${detailProduct.price}</p>
 
-          <div className="flex items-center justify-evenly w-2/4 h-8 -ml-5">
-            <div className="flex items-center bg-grayLight w-24 h-11">
+          <div className="flex items-center justify-evenly lg:w-2/4 h-8 -ml-5">
+            <div className="flex items-center bg-grayLight lg:w-24 h-11 sm:w-32 ">
               <button className="w-80 " onClick={decrementQuantitiy}>
                 -
               </button>
@@ -69,12 +69,12 @@ function ProductDetail() {
         </div>
       </div>
 
-      <div className="flex justify-between mt-28">
-        <div className="w-2/4">
+      <div className="flex justify-between mt-28 sm:flex-col lg:flex-row">
+        <div className="lg:w-2/4">
           <h1 className="text-4xl font-bold">Features</h1>
           <p className="mt-10 text-base text-gray">{detailProduct.features} </p>
         </div>
-        <div className="w-1/4 mx-auto">
+        <div className="lg:w-1/4 lg:mx-auto sm:mt-7 lg:mt-0">
           <h1 className="text-3xl font-bold mb-10">IN THE BOX</h1>
 
           {includedItems.map((item) => {
@@ -88,34 +88,39 @@ function ProductDetail() {
         </div>
       </div>
 
-      <div className="flex justify-around mt-20">
+      <div className="flex justify-around lg:flex-row md:flex-row  lg:mt-20 sm:mt-10 sm:flex-col ">
         <div>
           <img
-            src={detailProduct.gallery.first?.desktop}
+            src={detailProduct.gallery?.first?.desktop}
             alt={detailProduct.name}
+            className="md:w-[300px] md:h-[196px]"
           />
           <img
-            src={detailProduct.gallery.second?.desktop}
+            src={detailProduct.gallery?.second?.desktop}
             alt={detailProduct.name}
-            className="mt-14"
+            className="lg:mt-14 sm:mt-10 md:w-[300px] md:h-[196px]"
           />
         </div>
         <img
-          src={detailProduct.gallery.third?.desktop}
+          src={detailProduct.gallery?.third?.desktop}
           alt={detailProduct.name}
+          className="lg:mt-0 sm:mt-10"
         />
       </div>
 
-      <div className="mt-10">
-        <h1 className="w-full flex justify-center my-20 text-4xl font-semibold">
+      <div className="mt-20">
+        <h1 className="w-full flex justify-center my-10 text-4xl font-semibold">
           YOU MAY ALSO LIKE
         </h1>
 
-        <div className="flex justify-between">
+        <div className="flex lg:flex-row md:flex-row sm:flex-col md:w-3/4">
           {likes
             ? likes.map((like) => {
                 return (
-                  <div key={nanoid()}>
+                  <div
+                    key={nanoid()}
+                    className="lg:mt-0 md:-ml-1 mx-5 p-5 sm:mt-10"
+                  >
                     <img
                       src={like.image.desktop}
                       alt={like.name}

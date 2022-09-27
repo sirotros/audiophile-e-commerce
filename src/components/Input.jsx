@@ -10,9 +10,9 @@ function Input({
   className,
   value,
 }) {
-  let classNames = `flex flex-col ${full ? "w-[710px] ml-9" : "w-80 "} ${
-    error ? "text-red" : ""
-  } ${className}`;
+  let classNames = `flex flex-col ${
+    full ? "lg:w-[710px] sm:w-[320px] ml-9" : "w-80 "
+  } ${error ? "text-red" : ""} ${className}`;
   return (
     <div className={classNames}>
       <div className="flex justify-between items-center">

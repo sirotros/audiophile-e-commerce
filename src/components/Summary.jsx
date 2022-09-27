@@ -25,7 +25,7 @@ function Summary({ form, toggleModal, setTrigger }) {
     basketItems.length === 0 ? setDisabled(true) : setDisabled(false);
   }, []);
   return (
-    <div className="bg-white w-[350px] h-max  p-8">
+    <div className="bg-white lg:w-[350px] sm:w-10/12 sm:mx-auto sm:mt-10 lg:mt-0  h-max p-8">
       <h1 className="text-xl">SUMMARY</h1>
       {basketItems.length > 0 ? (
         <>

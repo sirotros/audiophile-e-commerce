@@ -28,7 +28,11 @@ function Header() {
           className="lg:hidden sm:block text-white text-2xl"
           onClick={(e) => setOpenMenu(!openMenu)}
         />
-        {openMenu ? <div className="absolute top-36 z-[99999] bg-white" ><Categories /> </div>: null}
+        {openMenu ? (
+          <div className="absolute top-32 z-[99999] bg-white">
+            <Categories setOpenMenu={setOpenMenu} />
+          </div>
+        ) : null}
 
         <Link to={"/"} className="text-white text-2xl ">
           audiophile

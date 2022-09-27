@@ -58,7 +58,7 @@ function CheckoutForm({
   };
 
   return (
-    <div className="w-8/12  py-10 h-max bg-white">
+    <div className="lg:w-8/12  py-10 h-max bg-white">
       <h1 className="font-semibold text-3xl ml-8 my-7">CHECKOUT</h1>
       <h5 className="text-orange font-medium text-sm ml-9">BILLING DETAILS</h5>
 
@@ -128,7 +128,7 @@ function CheckoutForm({
                 full
               />
 
-              <div className="flex justify-around">
+              <div className="flex justify-around flex-wrap">
                 <Field
                   as={Input}
                   name="zipCode"
@@ -162,11 +162,11 @@ function CheckoutForm({
               />
             </div>
             <div className="mt-5">
-              <h5 className="text-orange font-medium text-sm ml-9">
+              <h5 className="text-orange font-medium text-sm ml-9 mt-5">
                 PAYMENT DETAILS
               </h5>
-              <div className="flex justify-between w-11/12 mx-auto mt-5">
-                <h5>Payment Method</h5>
+              <div className="flex justify-between lg:flex-row sm:flex-col sm:w-full sm:ml-16 lg:w-11/12 lg:mx-auto mt-5">
+                <h5 className="sm:mb-5">Payment Method</h5>
                 <div>
                   <div
                     className="border-[1px] border-gray w-64 h-14 px-3 rounded-md flex items-center hover:cursor-pointer"
@@ -204,7 +204,7 @@ function CheckoutForm({
               </div>
               <div>
                 {paymentMethod === "emoney" ? (
-                  <div className="flex justify-around">
+                  <div className="flex justify-around flex-wrap sm:-ml-7">
                     <Field
                       as={Input}
                       name="eMoney"
