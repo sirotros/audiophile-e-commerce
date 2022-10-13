@@ -23,7 +23,9 @@ function ModalContainer({ children }) {
 function Modal({ children, isOpen = false, basket, middle, onClose }) {
   if (!isOpen) return null;
   const className = `${
-    basket ? "lg:w-[400px] sm:w-11/12 absolute lg:right-52 lg:top-28 sm:top-24" : ""
+    basket
+      ? "lg:w-[400px] sm:w-full absolute sm:-right-1 md:-right-16 lg:right-52 lg:top-28 sm:top-24"
+      : ""
   } ${middle ? "lg:w-[500px] sm:w-11/12 absolute" : ""}`;
   return createPortal(
     <ModalContainer>

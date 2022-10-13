@@ -110,7 +110,7 @@ function CheckoutForm({
               placeholder="+1 202-555-0136"
               onChange={handleChange}
               value={values.phoneNumber}
-              className="ml-9"
+              className="sm:ml-5 md:ml-10 lg:ml-9"
             />
             <div className="mt-5">
               <h5 className="text-orange font-medium text-sm ml-9">
@@ -126,6 +126,7 @@ function CheckoutForm({
                 onChange={handleChange}
                 value={values.address}
                 full
+                className="sm:ml-5 md:ml-10 lg:ml-8"
               />
 
               <div className="flex justify-around flex-wrap">
@@ -158,7 +159,7 @@ function CheckoutForm({
                 placeholder="New York"
                 onChange={handleChange}
                 value={values.country}
-                className="ml-9"
+                className="sm:ml-5 md:ml-10 lg:ml-9"
               />
             </div>
             <div className="mt-5">

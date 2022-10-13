@@ -11,7 +11,7 @@ function Input({
   value,
 }) {
   let classNames = `flex flex-col ${
-    full ? "lg:w-[710px] sm:w-[320px] ml-9" : "w-80 "
+    full ? "lg:w-[710px] sm:w-[320px] ml-9" : "w-80"
   } ${error ? "text-red" : ""} ${className}`;
   return (
     <div className={classNames}>

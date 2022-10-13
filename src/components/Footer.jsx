@@ -11,7 +11,7 @@ function Footer() {
       <div className="lg:w-2/4 lg:mx-auto flex lg:flex-row sm:flex-col ">
         <div className="flex flex-col justify-evenly mt-12 h-[250px] sm:items-center">
           <h2 className="font-bold text-3xl">audiophile</h2>
-          <p className="w-3/4 text-[#ffffff80] py-10">
+          <p className="sm:w-10/12 sm:ml-4 lg:ml-0 lg:w-3/4 text-[#ffffff80] py-10">
             Audiophile is an all in one stop to fulfill your audio needs. We're
             a small team of music lovers and sound specialists who are devoted
             to helping you get the most out of personal audio. Come and visit
@@ -22,7 +22,7 @@ function Footer() {
           </p>
         </div>
         <div className="lg:w-full sm:w-2/4 sm:mx-auto h-full ">
-          <div className="flex items-center lg:text-md sm:text-sm h-full sm:-ml-14 mt-20">
+          <div className="flex items-center lg:text-md sm:text-sm h-full sm:-ml-20 lg:ml-10 mt-20">
             <Link className="text-white mx-2 h-full flex items-center" to={"/"}>
               HOME
             </Link>

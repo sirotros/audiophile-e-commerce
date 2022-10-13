@@ -20,7 +20,7 @@ function Checkout() {
       <button onClick={() => navigate(-1)} className="lg:ml-96 my-10 text-gray">
         Go Back
       </button>
-      <div className="lg:w-defaultWidth sm:w-full h-[1400px]  mx-auto flex justify-evenly lg:flex-row sm:flex-col ">
+      <div className="lg:w-defaultWidth sm:w-full h-[1400px] mx-auto flex justify-evenly lg:flex-row sm:flex-col ">
         <CheckoutForm
           form={form}
           setForm={setForm}

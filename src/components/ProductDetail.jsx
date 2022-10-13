@@ -118,7 +118,7 @@ function ProductDetail() {
                 return (
                   <div
                     key={nanoid()}
-                    className="lg:mt-0 md:-ml-1 mx-5 p-5 sm:mt-10"
+                    className="lg:mt-0 md:-ml-1 mx-5 lg:p-5 sm:mt-10"
                   >
                     <img
                       src={like.image.desktop}

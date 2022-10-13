@@ -15,6 +15,7 @@ function NewProduct() {
         </h2>
         <p className="lg:w-[500px] text-gray">
           {newItem[1].description.toUpperCase()}
+          
         </p>
         <div className="sm:flex">
           <Link

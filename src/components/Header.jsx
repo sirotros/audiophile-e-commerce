@@ -21,15 +21,16 @@ function Header() {
   useEffect(() => {
     dispatch(calculatQuantity());
   }, [basket, basketTotal]);
+
   return (
-    <header className="w-full h-20 bg-dark ">
-      <div className="lg:w-defaultWidth sm:w-full h-full mx-auto flex items-center lg:justify-between sm:justify-around">
+    <header className="w-full lg:h-20 sm:h-32 bg-dark  ">
+      <div className="lg:w-defaultWidth sm:w-full sm:h-20 md:h-20 mx-auto flex sm:items-center lg:justify-between sm:justify-around sm:mb-5">
         <FiMenu
           className="lg:hidden sm:block text-white text-2xl"
           onClick={(e) => setOpenMenu(!openMenu)}
         />
         {openMenu ? (
-          <div className="absolute top-32 z-[99999] bg-white">
+          <div className=" w-11/12 absolute top-32 z-[99999] bg-white">
             <Categories setOpenMenu={setOpenMenu} />
           </div>
         ) : null}

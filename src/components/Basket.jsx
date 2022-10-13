@@ -28,7 +28,7 @@ function Basket({ toggleModal }) {
   return (
     <>
       {basketItem.length > 0 ? (
-        <div className="w-full min-h-48 p-4 rounded-lg bg-white">
+        <div className="sm:w-10/12 lg:w-full min-h-48 sm:p-4 lg:p-4 rounded-lg bg-white">
           <div className="w-full flex justify-between">
             <h1>Basket ({basketItem.length}) </h1>
             <button className="underline text-gray" onClick={removeAll}>
@@ -81,7 +81,7 @@ function Basket({ toggleModal }) {
           </Link>
         </div>
       ) : (
-        <div className="w-full min-h-48 p-4 rounded-lg bg-white">
+        <div className="sm:w-10/12 lg:w-full min-h-48 p-4 rounded-lg bg-white">
           <h1 className="w-full flex justify-center text-lg">
             Your Basket is empty
           </h1>

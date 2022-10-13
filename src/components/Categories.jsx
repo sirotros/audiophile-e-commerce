@@ -30,7 +30,7 @@ function Categories({ setOpenMenu }) {
 
   return (
     <div
-      className="lg:w-defaultWidth sm:w-11/12 md:w-[800px]  md:mt-50 mx-auto flex sm:flex-col md:flex-row lg:flex-row sm:mt-40 lg:mt-40 md:justify-evenly lg:justify-evenly z-20
+      className="lg:w-defaultWidth sm:w-10/12 md:w-[800px] md:mt-50 mx-auto flex sm:flex-col md:flex-row lg:flex-row sm:mt-40 lg:mt-40 md:justify-evenly lg:justify-evenly z-20
     "
     >
       {categories &&
@@ -44,7 +44,7 @@ function Categories({ setOpenMenu }) {
             >
               <img
                 src={category.img}
-                className="absolute lg:w-[200px] lg:h-[200px]  lg:left-20 bottom-16  md:-left-20 hover:translate-y-[-10px] hover:transition"
+                className="absolute lg:w-[200px] lg:h-[200px] lg:left-20 bottom-16 hover:translate-y-[-10px] hover:transition"
                 alt="category"
               />
               <p className="flex justify-center mt-28 py-2">
