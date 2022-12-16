@@ -19,7 +19,7 @@ You can view the [live demo here](https://audiophile-e-commerce-nine.vercel.app/
 ## How to run this projects
  First clone this repository.
 ```bash
-git clone audiophile-e-commerce
+git clone https://github.com/sirotros/audiophile-e-commerce.git
 
 ```
 Go to folder
